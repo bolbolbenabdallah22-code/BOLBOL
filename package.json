@@ -1,0 +1,25 @@
+{
+  "name": "bolbol",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BOLBOL fitness, strength and nutrition app for Android and iOS",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "cap:sync": "npm run build && cap sync",
+    "cap:android": "cap open android",
+    "cap:ios": "cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/ios": "^8.5.3",
+    "firebase": "^12.19.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3",
+    "vite": "^7.1.12"
+  }
+}
