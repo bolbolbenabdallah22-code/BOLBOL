@@ -1,0 +1,318 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#10120f">
+  <meta name="description" content="BOLBOL — Your personal strength, fitness and nutrition companion.">
+  <title>BOLBOL | Fitness Performance</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="BOLBOL home">
+        <span class="brand-mark">B</span>
+        <span class="brand-name">BOLBOL<span class="brand-dot">.</span></span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-page="home">
+          <span class="nav-icon">⌂</span><span>Dashboard</span>
+        </a>
+        <a class="nav-link" href="#workout" data-page="workout">
+          <span class="nav-icon">✳</span><span>Workouts</span>
+        </a>
+        <a class="nav-link" href="#strength" data-page="strength">
+          <span class="nav-icon">↗</span><span>Strength</span>
+        </a>
+        <a class="nav-link" href="#nutrition" data-page="nutrition">
+          <span class="nav-icon">◉</span><span>Nutrition</span>
+        </a>
+        <a class="nav-link" href="#progress" data-page="progress">
+          <span class="nav-icon">⌁</span><span>Progress</span>
+        </a>
+        <a class="nav-link" href="#profile" data-page="profile">
+          <span class="nav-icon">◎</span><span>My Profile</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-label">YOUR PERFORMANCE</div>
+        <div class="sidebar-promo">
+          <div class="promo-symbol">✦</div>
+          <strong>Build your best.</strong>
+          <p>Train with purpose. Track every win.</p>
+          <span class="promo-status"><span></span> YOUR JOURNEY STARTS HERE</span>
+        </div>
+        <div class="sidebar-version">BOLBOL · VERSION 1.0</div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="icon-button menu-toggle" id="menu-toggle"
+          type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+        <a class="mobile-brand" href="#home">
+          <span class="brand-mark">B</span>
+          <span class="brand-name">BOLBOL<span class="brand-dot">.</span></span>
+        </a>
+
+        <div class="topbar-spacer"></div>
+
+        <div class="connection-status">
+          <span class="status-dot"></span>
+          <span>PERFORMANCE MODE</span>
+        </div>
+
+        <button class="profile-button" id="profile-button" type="button"
+          aria-label="Open profile" data-page="profile">
+          <span class="avatar" id="user-avatar">B</span>
+        </button>
+      </header>
+
+      <div class="page-container">
+        <section class="welcome-section" id="home">
+          <div class="welcome-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> YOUR FITNESS COMMAND CENTER</div>
+            <h1>Make every rep <span>count.</span></h1>
+            <p class="welcome-subtitle">
+              Your training, nutrition and progress — one focused plan.
+            </p>
+          </div>
+
+          <div class="date-chip">
+            <span class="date-icon">◷</span>
+            <span id="current-date">YOUR DAILY PLAN</span>
+          </div>
+        </section>
+
+        <section class="hero-card" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <div class="hero-tag"><span></span> BUILT FOR YOUR NEXT LEVEL</div>
+            <h2 id="hero-title">Stronger habits.<br><span>Stronger you.</span></h2>
+            <p>Small improvements. Consistent training. Real progress.</p>
+            <a class="primary-button" href="#workout" data-page="workout">
+              Explore training <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-ring art-ring-one"></div>
+            <div class="art-ring art-ring-two"></div>
+            <div class="art-center">B<span>+</span></div>
+            <div class="art-label art-label-top">DISCIPLINE</div>
+            <div class="art-label art-label-bottom">PROGRESS</div>
+          </div>
+          <div class="hero-index">01 / PERFORMANCE</div>
+        </section>
+
+        <section class="section-block" aria-labelledby="overview-title">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">THE BIG PICTURE</div>
+              <h2 id="overview-title">Your overview</h2>
+            </div>
+            <span class="section-caption">YOUR STATS</span>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="stat-label">CURRENT WEIGHT</span>
+                <span class="stat-icon">↕</span>
+              </div>
+              <div class="stat-value"><span id="current-weight">—</span><small>kg</small></div>
+              <div class="stat-footer">Your latest check-in</div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="stat-label">GOAL WEIGHT</span>
+                <span class="stat-icon">◎</span>
+              </div>
+              <div class="stat-value"><span id="goal-weight">—</span><small>kg</small></div>
+              <div class="stat-footer">Your personal target</div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="stat-label">WORKOUTS</span>
+                <span class="stat-icon">✳</span>
+              </div>
+              <div class="stat-value"><span id="workout-count">0</span><small>total</small></div>
+              <div class="stat-footer">Sessions recorded</div>
+            </article>
+
+            <article class="stat-card accent-stat">
+              <div class="stat-top">
+                <span class="stat-label">DAILY CALORIES</span>
+                <span class="stat-icon">◉</span>
+              </div>
+              <div class="stat-value"><span id="daily-calories">—</span><small>kcal</small></div>
+              <div class="stat-footer">Personalized target</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel progress-panel" id="progress">
+            <div class="panel-heading">
+              <div>
+                <div class="eyebrow">STAY ON TRACK</div>
+                <h2>Goal progress</h2>
+              </div>
+              <span class="panel-symbol">↗</span>
+            </div>
+
+            <div class="goal-progress-layout">
+              <div class="progress-ring" id="progress-ring" role="img"
+                aria-label="Goal progress not yet available">
+                <div class="progress-ring-inner">
+                  <strong id="goal-progress">0%</strong>
+                  <span>PROGRESS</span>
+                </div>
+              </div>
+
+              <div class="goal-details">
+                <div class="goal-detail">
+                  <span>Starting weight</span>
+                  <strong id="starting-weight">— kg</strong>
+                </div>
+                <div class="goal-detail">
+                  <span>Current weight</span>
+                  <strong id="progress-current-weight">— kg</strong>
+                </div>
+                <div class="goal-detail">
+                  <span>Target weight</span>
+                  <strong id="progress-goal-weight">— kg</strong>
+                </div>
+              </div>
+            </div>
+
+            <a class="text-link" href="#profile" data-page="profile">
+              Update your goals <span>→</span>
+            </a>
+          </article>
+
+          <article class="panel quick-panel">
+            <div class="panel-heading">
+              <div>
+                <div class="eyebrow">TAKE ACTION</div>
+                <h2>Quick access</h2>
+              </div>
+              <span class="panel-symbol">✦</span>
+            </div>
+
+            <div class="quick-links">
+              <a class="quick-link" href="#workout" data-page="workout">
+                <span class="quick-icon">✳</span>
+                <span><strong>Start training</strong><small>Plan your next session</small></span>
+                <span class="quick-arrow">↗</span>
+              </a>
+              <a class="quick-link" href="#nutrition" data-page="nutrition">
+                <span class="quick-icon">◉</span>
+                <span><strong>Track nutrition</strong><small>Meals and daily macros</small></span>
+                <span class="quick-arrow">↗</span>
+              </a>
+              <a class="quick-link" href="#progress" data-page="progress">
+                <span class="quick-icon">⌁</span>
+                <span><strong>Log progress</strong><small>Record your latest results</small></span>
+                <span class="quick-arrow">↗</span>
+              </a>
+            </div>
+          </article>
+        </section>
+
+        <section class="section-block" id="workout">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">YOUR NEXT SESSION</div>
+              <h2>Training starts here</h2>
+            </div>
+            <a class="text-link" href="#strength" data-page="strength">Strength tools →</a>
+          </div>
+
+          <div class="feature-grid">
+            <a class="feature-card strength-card" href="#strength" data-page="strength">
+              <span class="feature-number">01</span>
+              <span class="feature-icon">↗</span>
+              <h3>Strength training</h3>
+              <p>Exercises, sets, reps and performance tracking.</p>
+              <span class="feature-link">Explore strength <span>→</span></span>
+            </a>
+
+            <a class="feature-card nutrition-card" href="#nutrition" data-page="nutrition">
+              <span class="feature-number">02</span>
+              <span class="feature-icon">◉</span>
+              <h3>Smart nutrition</h3>
+              <p>Food tracking, calories and macro targets.</p>
+              <span class="feature-link">Explore nutrition <span>→</span></span>
+            </a>
+
+            <a class="feature-card progress-card" href="#progress" data-page="progress">
+              <span class="feature-number">03</span>
+              <span class="feature-icon">⌁</span>
+              <h3>Progress tracking</h3>
+              <p>Monitor weight, workouts and your milestones.</p>
+              <span class="feature-link">View progress <span>→</span></span>
+            </a>
+          </div>
+        </section>
+
+        <section class="panel setup-panel" id="profile">
+          <div class="setup-icon">◎</div>
+          <div class="setup-copy">
+            <div class="eyebrow">YOUR STARTING POINT</div>
+            <h2>Make this plan yours.</h2>
+            <p>Set up your personal profile to prepare for individualized training and nutrition calculations.</p>
+          </div>
+          <button class="secondary-button" id="setup-profile" type="button" data-page="profile">
+            Set up profile <span>→</span>
+          </button>
+        </section>
+
+        <footer class="app-footer">
+          <a class="brand footer-brand" href="#home">
+            <span class="brand-mark">B</span>
+            <span class="brand-name">BOLBOL<span class="brand-dot">.</span></span>
+          </a>
+          <p>TRAIN SMART. EAT WELL. KEEP MOVING.</p>
+          <span>© <span id="footer-year"></span> BOLBOL</span>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a class="mobile-nav-link active" href="#home" data-page="home">
+      <span>⌂</span><small>Home</small>
+    </a>
+    <a class="mobile-nav-link" href="#workout" data-page="workout">
+      <span>✳</span><small>Train</small>
+    </a>
+    <a class="mobile-nav-link" href="#nutrition" data-page="nutrition">
+      <span>◉</span><small>Nutrition</small>
+    </a>
+    <a class="mobile-nav-link" href="#progress" data-page="progress">
+      <span>⌁</span><small>Progress</small>
+    </a>
+    <a class="mobile-nav-link" href="#profile" data-page="profile">
+      <span>◎</span><small>Profile</small>
+    </a>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <div class="toast-container" id="toast-container"
+    aria-live="polite" aria-atomic="true"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+          </html>
+  
